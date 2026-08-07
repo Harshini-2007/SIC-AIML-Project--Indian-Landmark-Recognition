@@ -1,4 +1,4 @@
-# 🏛️ Landmark – AI-Powered Indian Monument Recognition & Travel Guide
+# 🏛️ Landmark Recognition – AI-Powered Indian Monument Recognition & Travel Guide
 
 An AI-powered web application that identifies **23 Indian monuments** from uploaded images using **Transfer Learning (DenseNet121)** and provides concise monument information, historical insights, interactive location maps, nearby attractions, and an AI-powered travel guide to help users explore India's rich cultural heritage.
 
