@@ -43,6 +43,7 @@ Planning a trip or learning about Indian heritage often requires searching acros
 ### Monument History 
 
 <img width="677" height="317" alt="image" src="https://github.com/user-attachments/assets/cb6e1306-827c-493c-a5a8-5175ef04a55d" />
+
 --- 
 
 ### Architectural Highlights
