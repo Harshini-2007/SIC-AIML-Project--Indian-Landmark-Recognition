@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Landmark AI Explorer</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-landmark"></i>
+
+<span>Landmark AI</span>
+
+</div>
+
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#explore">Explore</a></li>
+
+<li><a href="#story">Story</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#mapSection">Map</a></li>
+
+<li><a href="#chatSection">AI Guide</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<section class="hero" id="home">
+
+
+<div class="hero-content">
+
+
+<h1>
+Discover India's Heritage
+</h1>
+
+
+<p>
+
+Upload a monument image and let AI uncover
+its history, architecture and fascinating facts.
+
+</p>
+
+
+<a href="#explore" class="hero-btn">
+
+Explore Now
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section id="explore" class="upload-section">
+
+
+<div class="upload-card">
+
+
+<h2>
+
+<i class="fa-solid fa-camera"></i>
+
+Identify a Monument
+
+</h2>
+
+
+<p>
+
+Upload an image of an Indian monument.
+
+</p>
+
+
+
+<form id="uploadForm"
+enctype="multipart/form-data">
+
+
+<label for="imageInput"
+class="upload-box">
+
+
+<i class="fa-solid fa-cloud-arrow-up"></i>
+
+
+<span>
+
+Click to upload an image
+
+</span>
+
+
+</label>
+
+
+
+<input
+
+type="file"
+
+id="imageInput"
+
+accept="image/*"
+
+hidden>
+
+
+<button type="submit">
+
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+
+Identify Monument
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+<div class="preview-card">
+
+
+<img
+
+id="previewImage"
+
+src=""
+
+alt="Preview"
+
+style="display:none;">
+
+
+
+<div id="loader"
+class="loader"
+style="display:none;">
+
+
+<div class="spinner"></div>
+
+
+<p>
+
+AI is analyzing the image...
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="result-section">
+
+
+<div class="result-header">
+
+
+<span class="badge">
+
+AI Prediction
+
+</span>
+
+
+
+<div class="result-icon">
+    <i class="fa-solid fa-landmark"></i>
+</div>
+
+<h1 id="monumentName">Monument Name</h1>
+
+<p id="state">
+    <i class="fa-solid fa-location-dot"></i>
+    State, India
+</p>
+
+
+</div>
+
+
+</section>
+<!-- ========================= -->
+<!-- Story Section -->
+<!-- ========================= -->
+
+<section id="story" class="story-section">
+
+<div class="section-title">
+
+<h2>
+The Story
+</h2>
+
+<p>
+Journey through the history behind this magnificent monument.
+</p>
+
+</div>
+
+
+<div class="story-card">
+
+
+<i class="fa-solid fa-book-open"></i>
+
+
+<p id="history">
+
+History will appear here after prediction.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- ========================= -->
+<!-- Architecture -->
+<!-- ========================= -->
+
+
+<section class="architecture-section">
+
+
+<div class="section-title">
+
+<h2>
+Architectural Highlights
+</h2>
+
+</div>
+
+
+
+<div class="architecture-grid">
+
+
+
+<div class="info-card">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h3>
+Architecture
+</h3>
+
+<p id="architecture">
+--
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<i class="fa-solid fa-hammer"></i>
+
+<h3>
+Builder
+</h3>
+
+<p id="builder">
+--
+</p>
+
+</div>
+
+
+
+
+<div class="info-card">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<h3>
+Built
+</h3>
+
+<p id="builtYear">
+--
+</p>
+
+</div>
+
+
+
+
+<div class="info-card">
+
+<i class="fa-solid fa-crown"></i>
+
+<h3>
+Dynasty
+</h3>
+
+<p id="dynasty">
+--
+</p>
+
+</div>
+
+
+
+
+<div class="info-card">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>
+UNESCO
+</h3>
+
+<p id="unesco">
+--
+</p>
+
+</div>
+
+
+
+
+<div class="info-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>
+Timings
+</h3>
+
+<p id="timings">
+--
+</p>
+
+</div>
+
+
+
+
+<div class="info-card">
+
+<i class="fa-solid fa-ticket"></i>
+
+<h3>
+Entry Fee
+</h3>
+
+<p id="entryFee">
+--
+</p>
+
+</div>
+
+
+
+
+<div class="info-card">
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+<h3>
+Best Time
+</h3>
+
+<p id="bestTime">
+--
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ========================= -->
+<!-- Did You Know -->
+<!-- ========================= -->
+
+
+<section class="fact-section">
+
+
+<div class="section-title">
+
+
+<h2>
+Did You Know?
+</h2>
+
+
+</div>
+
+
+
+<div class="fact-card">
+
+
+<i class="fa-solid fa-lightbulb"></i>
+
+
+
+<p id="speciality">
+
+Amazing facts about this monument will appear here.
+
+</p>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- ========================= -->
+<!-- Gallery -->
+<!-- ========================= -->
+
+
+<section id="gallery" class="gallery-section">
+
+
+<div class="section-title">
+
+
+<h2>
+Monument Gallery
+</h2>
+
+
+<p>
+Explore beautiful views of the monument.
+</p>
+
+
+</div>
+
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-card">
+
+<img id="gallery1"
+src=""
+alt="Gallery Image 1">
+
+</div>
+
+
+
+<div class="gallery-card">
+
+<img id="gallery2"
+src=""
+alt="Gallery Image 2">
+
+</div>
+
+
+
+<div class="gallery-card">
+
+<img id="gallery3"
+src=""
+alt="Gallery Image 3">
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+<!-- ========================= -->
+<!-- Map -->
+<!-- ========================= -->
+
+
+<section id="mapSection" class="map-section">
+
+
+<div class="section-title">
+
+<h2>
+Location
+</h2>
+
+<p>
+Find this monument on the map.
+</p>
+
+</div>
+
+
+
+<div class="map-card">
+
+
+<!-- Leaflet Map -->
+
+<div id="map"></div>
+
+
+
+<br><br>
+
+
+
+<a
+
+id="googleMapBtn"
+
+href="#"
+
+target="_blank"
+
+class="map-btn">
+
+
+<i class="fa-solid fa-location-dot"></i>
+
+Open in Google Maps
+
+
+</a>
+
+
+
+</div>
+
+
+</section> 
+
+<section id="chatSection" class="chat-section">
+
+    <div class="section-title">
+        <h2>AI Heritage Guide</h2>
+        <p>Ask anything about the identified monument.</p>
+    </div>
+
+    <div class="chat-container">
+
+        <div id="chatMessages" class="chat-messages"></div>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="userMessage"
+                placeholder="Ask a question...">
+
+            <button id="sendBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================= -->
+<!-- Footer -->
+<!-- ========================= -->
+
+
+<footer>
+
+
+<div class="footer-content">
+
+
+<h2>
+
+<i class="fa-solid fa-landmark"></i>
+
+Landmark AI Explorer
+
+</h2>
+
+
+
+<p>
+
+Discover India's incredible heritage with Artificial Intelligence.
+
+</p>
+
+
+
+
+<div class="footer-icons">
+
+
+<i class="fab fa-github"></i>
+
+<i class="fab fa-linkedin"></i>
+
+<i class="fab fa-instagram"></i>
+
+
+</div>
+
+
+
+<p class="copyright">
+
+© 2026 Landmark AI Explorer
+
+</p>
+
+
+
+</div>
+
+
+</footer> 
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Your JS -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
