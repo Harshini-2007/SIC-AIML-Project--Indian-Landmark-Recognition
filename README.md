@@ -27,22 +27,19 @@ Planning a trip or learning about Indian heritage often requires searching acros
 ### Home Page
 <img width="671" height="395" alt="image" src="https://github.com/user-attachments/assets/bf83b120-db04-4074-9f47-39335dfe997f" />
 
-
 ---
 
 ### Upload Image
-
-
-
-
----
-
-### Monument Prediction
 <img width="620" height="232" alt="image" src="https://github.com/user-attachments/assets/d78c2b27-2b8c-4662-b52a-b735beb6f41a" />
 
 
 
 ---
+### Landmark Detection
+<img width="613" height="341" alt="Screenshot 2026-08-07 105659" src="https://github.com/user-attachments/assets/a814fa14-d19b-45a7-b438-45db5f92f0b9" />
+
+---
+
 ### Monument History 
 
 <img width="677" height="317" alt="image" src="https://github.com/user-attachments/assets/cb6e1306-827c-493c-a5a8-5175ef04a55d" />
@@ -150,12 +147,11 @@ Monument Prediction
 
 **Harshini Perumal**
 
-B.E. Artificial Intelligence & Machine Learning
-Nitte Meenakshi Institute Of Technology 
-Bangalore
+- B.E. Artificial Intelligence & Machine Learning
+- Nitte Meenakshi Institute Of Technology 
+- Bangalore
 
 ---
 
 
 
-Give this repository a ⭐ on GitHub!
