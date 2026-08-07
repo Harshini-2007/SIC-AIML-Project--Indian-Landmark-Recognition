@@ -148,8 +148,8 @@ Monument Prediction
 **Harshini Perumal**
 
 - B.E. Artificial Intelligence & Machine Learning
-- Nitte Meenakshi Institute Of Technology 
-- Bangalore
+  Nitte Meenakshi Institute Of Technology, Bangalore
+  
 
 ---
 
