@@ -145,13 +145,9 @@ Monument Prediction
 
 ## 👩‍💻 Author
 
-**Harshini Perumal**
-
-- B.E. Artificial Intelligence & Machine Learning
-  Nitte Meenakshi Institute Of Technology, Bangalore
-  
-
----
+**Harshini Perumal**  
+B.E. Artificial Intelligence & Machine Learning  
+Nitte Meenakshi Institute of Technology, Bengaluru
 
 
 
